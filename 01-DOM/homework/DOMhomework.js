@@ -33,7 +33,7 @@ class ToDo{
 
 // Tu código acá:
 ToDo.prototype.completeToDo = function(){
-  this.complete = true;
+  this.complete = !this.complete;
 }
 
 // Agregar dos parámetros a la función 'buildToDo':
@@ -129,7 +129,8 @@ function displayToDos() {
 
 function addToDo() {
   // Tu código acá:
-  let valorInput = document.getElementById('toDoInput').value; 
+  let valorInput = document.getElementById('toDoInput').value;
+  if(valorInput.trim() === "") return;
   let newToDo = new ToDo(valorInput);
   
   toDoItems.push(newToDo);
