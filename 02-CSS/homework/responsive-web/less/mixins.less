@@ -1,1 +1,24 @@
 // Mixins acá
+.propiedades-img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.propiedades-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: @nav-bg;
+    border-bottom: 1rem;
+    border-color: @nav-border;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+.btn-border(@color; @radius: 5px){
+    border: 2px solid @color;
+    border-radius: @radius;
+    background-color: @btn-bg-color;
+}
